@@ -1,4 +1,4 @@
-## 轻量级通用爬虫框架spider2local
+## 轻量级爬虫框架spider2local
 ### 1、框架设计
 ![spider2local.png](spider2local.png)
 ### 2、安装
