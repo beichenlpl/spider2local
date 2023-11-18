@@ -95,6 +95,7 @@ class Request(object):
         resp = requests.request(self.__method.value, f'{self.__host}/{self.__uri}', headers=self.__headers,
                                 params=self.__params, data=self.__data, files=self.__files, timeout=self.__timeout)
 
+        response.set_headers(resp.headers)
         if response.get_resp_type() == ResponseType.TEXT:
             resp.encoding = resp_encoding
             response.set_content(resp.text)

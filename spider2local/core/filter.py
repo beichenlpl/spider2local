@@ -38,7 +38,6 @@ class Filter(object):
         entity = Entity()
 
         first_rule: FilterRule = self.__rules[0]
-        node = None
         if first_rule.is_multiple:
             node = soup.find_all(first_rule.el_name, attrs=first_rule.attrs)
             entity.is_multiple = first_rule.is_multiple
