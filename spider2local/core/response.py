@@ -1,12 +1,8 @@
 from typing import Any
-from ..enums import ResponseType
+from ..local_enums import ResponseType
 
 
 class Response(object):
-    __resp_type: ResponseType = ResponseType.TEXT
-    __headers: Any = None
-    __content: Any = None
-
     def __init__(self, resp_type: ResponseType = ResponseType.TEXT, headers: Any = None, content: Any = None):
         self.__resp_type = resp_type
         self.__headers = headers

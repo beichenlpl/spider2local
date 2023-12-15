@@ -2,11 +2,9 @@ from bs4 import BeautifulSoup, PageElement, Tag
 
 
 class Entity(object):
-    node: BeautifulSoup | PageElement | Tag = None
-    is_multiple: bool = False
-
     def __init__(self):
-        pass
+        self.node: BeautifulSoup | PageElement | Tag = None
+        self.is_multiple: bool = False
 
     def text(self) -> str | list[str]:
         if self.is_multiple:

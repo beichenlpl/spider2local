@@ -1,19 +1,9 @@
 import requests
-from ..enums import RequestMethod, ResponseType
+from ..local_enums import RequestMethod, ResponseType
 from .response import Response
 
 
 class Request(object):
-    __host: str = ''
-    __uri: str = ''
-    __method: RequestMethod = RequestMethod.GET
-    __headers: dict = None
-    __params: dict = None
-    __data: dict = None
-    __files: dict = None
-    __timeout: int = 30
-    __resp_type: ResponseType = ResponseType.TEXT
-
     def __init__(self, host: str = '', uri: str = '', method: RequestMethod = RequestMethod.GET, headers: dict = None,
                  data: dict = None, params: dict = None, files: dict = None, timeout: int = 30,
                  resp_type: ResponseType = ResponseType.TEXT):
